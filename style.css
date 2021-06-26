@@ -1,0 +1,300 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/*My Code*/
+* {
+  box-sizing: border-box;
+}
+
+.sky {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-image: url("sky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: sky 6s linear infinite;
+}
+
+.sky .farm {
+  height: 100vh;
+  background-image: url("farm.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: farm 6s linear infinite;
+}
+
+.sky .road {
+  background-image: url("road.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+  position: relative;
+  bottom: 0px;
+  width: 300px;
+  height: 20vh;
+  animation: road 6s linear infinite;
+}
+
+.sky .car {
+  background-image: url("car.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17rem;
+  height: 4.699rem;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  animation: body linear 0.6s infinite;
+}
+
+.sky .tire {
+  position: absolute;
+  animation: tire linear 0.6s infinite;
+}
+
+.sky .tire-1 {
+  background-image: url("wheel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 49px;
+  bottom: -20px;
+
+  left: 22px;
+}
+
+.sky .tire-2 {
+  background-image: url("wheel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 44px;
+  bottom: -20px;
+  left: 190px;
+}
+
+@keyframes tire {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes road {
+  100% {
+    transform: translateX(-300px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sky .road {
+    background-image: url("road.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    position: relative;
+    bottom: 0px;
+    width: 768vw;
+    height: 20vh;
+    animation: road 6s linear infinite;
+  }
+
+  @keyframes road {
+    100% {
+      transform: translateX(-768vw);
+    }
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .sky .road {
+    background-image: url("road.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    position: relative;
+    bottom: 0px;
+    width: 1500vw;
+    height: 20vh;
+    animation: road 6s linear infinite;
+  }
+
+  @keyframes road {
+    100% {
+      transform: translateX(-1500vw);
+    }
+  }
+}
